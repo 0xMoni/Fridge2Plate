@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Fridge2Plate Expiry",
+    "slug": "fridge2plate-expiry",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "fridge2plate",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F9FAFB"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fridge2plate.expiry",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to scan food expiry dates.",
+        "NSPhotoLibraryUsageDescription": "This app accesses your photos to scan food expiry labels."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F9FAFB"
+      },
+      "package": "com.fridge2plate.expiry",
+      "permissions": ["CAMERA"]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Fridge2Plate to access your camera to scan expiry dates."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Fridge2Plate to access your photos to scan expiry labels."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
